@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1259
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "p_vs_np_challenge", "p_vs_np_challenge\p_vs_np_challenge.pyproj", "{E59076D4-C402-454F-AD27-BC10B42AEC48}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E59076D4-C402-454F-AD27-BC10B42AEC48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E59076D4-C402-454F-AD27-BC10B42AEC48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C13F01DF-5438-4DEF-A48B-AE4C16D084DF}
+	EndGlobalSection
+EndGlobal

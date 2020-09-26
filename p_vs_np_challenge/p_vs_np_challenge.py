@@ -1,15 +1,16 @@
-routes = []
+"""
+DOCSTRING
+"""
+
+routes = list()
 
 def find_paths(node, cities, path, distance):
-    # Add way point
+    """
+    DOCSTRING
+    """
     path.append(node)
-
-    # Calculate path length from current to last node
     if len(path) > 1:
         distance += cities[path[-2]][node]
-
-    # If path contains all cities and is not a dead end,
-    # add path from last to first city and return.
     if (len(cities) == len(path)) and (path[0] in cities[path[-1]]):
         global routes
         path.append(path[0])
@@ -17,15 +18,9 @@ def find_paths(node, cities, path, distance):
         print(path, distance)
         routes.append([distance, path])
         return
-
-    # Fork paths for all possible cities not yet used
     for city in cities:
         if (city not in path) and (node in cities[city]):
             find_paths(city, dict(cities), list(path), distance)
-
-#CHALLENGE -- write your own strategy to estimate the shortest route
-#def find_paths_estimate(node, cities, path, distance):
-
 
 if __name__ == '__main__':
     cities = {
@@ -39,9 +34,7 @@ if __name__ == '__main__':
         'KA': {'MA': 67, 'S': 64, 'BA': 191},
         'BA': {'KA': 191, 'RV': 180, 'Z': 85, 'BE': 91},
         'BE': {'BA': 91, 'Z': 120},
-        'Z': {'BA': 120, 'BE': 85, 'RV': 91}
-    }
-
+        'Z': {'BA': 120, 'BE': 85, 'RV': 91}}
     print("Start: River City")
     find_paths('RV', cities, [], 0)
     routes.sort()
